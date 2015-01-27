@@ -3,16 +3,14 @@ require 'json'
 
 
 use Rack::Lint
-#use MyCustomMiddleware
 
 get '/' do
-  "Hello World!"
+  "British Secret Service"
 end
 
-get '/hello' do
-  "Open World!"
+get '/about' do
+  "The Secret Intelligence Service (SIS)"
 end
-
 
 
 post('/login') do

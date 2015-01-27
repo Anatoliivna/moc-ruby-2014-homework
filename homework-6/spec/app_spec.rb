@@ -12,12 +12,12 @@ class MyAppTest < Test::Unit::TestCase
 
   def test_my_default
     get '/'
-    assert_equal 'Hello World!', last_response.body
+    assert_equal 'British Secret Service', last_response.body
   end
 
   def test_with_params
-    get '/hello', :name => 'Open'
-    assert_equal 'Open World!', last_response.body
+    get '/about', :name => 'MI6'
+    assert_equal 'The Secret Intelligence Service (SIS)', last_response.body
   end
 
   def test_login_success
