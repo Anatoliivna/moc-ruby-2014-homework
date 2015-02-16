@@ -1,0 +1,19 @@
+
+<h1> <%= title %> </h1>
+<%if index do %>
+    <div class="row">
+      <%= link_to "New", "/services/new", class: "btn btn-primary col-md-2 col-md-offset-9" %>
+    </div>
+    <br/>
+<% end %>
+
+<table class="table table-bordered table-striped <%= visit ? "table-responsive" : "" %>">
+  <thead>
+  <tr>
+    <%
+       list.each do |item|
+         print "<th>" + item + "</th>"
+    %>
+  </tr>
+  </thead>
+  <tbody>
